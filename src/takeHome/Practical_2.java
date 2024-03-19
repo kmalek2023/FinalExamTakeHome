@@ -38,13 +38,21 @@ public class Practical_2 {
 				e.printStackTrace();
 			}
 			
-		}else {System.out.println("File does not exists in the path specified, check the path");}
+		}//else {System.out.println("File does not exists in the path specified, check the path");}
 
 	}
 	
 	public static boolean doesFileExist(String path) {
 		File file = new File(path);
-		return file.exists();
+		boolean value = false;
+		if (file.exists()) {
+			value = true;
+		}else {
+			value = false;
+		System.out.println("file not exists");
+		}
+		
+		return value;
 		
 	}
 
